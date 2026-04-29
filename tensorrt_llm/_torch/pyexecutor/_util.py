@@ -1298,7 +1298,7 @@ def _create_kv_cache_manager(
             per_layer_dtype=per_layer_dtype_map,
         )
 
-    if per_layer_dtype_map and model_engine is not None and not estimating_kv_cache:
+    if per_layer_dtype_map and model_engine is not None:
         _apply_per_layer_kv_quant_config(model_engine.model, per_layer_dtype_map,
                                          quant_config)
 
